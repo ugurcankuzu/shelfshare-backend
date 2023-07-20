@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(cors())
 
 connectDatabase();
-
+app.use("/uploads", express.static("uploads"))
 app.use("/api",routes);
 
 app.listen(process.env.PORT, () => {
